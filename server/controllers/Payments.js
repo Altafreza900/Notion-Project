@@ -7,6 +7,7 @@ const { default: mongoose } = require("mongoose");
 const { paymentSuccessEmail } = require("../mail/templates/paymentSuccessEmail");
 const crypto = require("crypto");
 const CourseProgress = require("../models/CourseProgress");
+require("dotenv").config();
 
 //initiate the razorpay order
 exports.capturePayment = async(req, res) => {
